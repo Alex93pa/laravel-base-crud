@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Http\Request;
 use App\Comic;
 
 class comicController extends Controller
@@ -21,6 +22,15 @@ class comicController extends Controller
     public function create()
     {
         return view('create');
+    }
+
+    public function store(Request $request){
+        $comicData = $request->all();
+        
+        $newComic = new Comic();
+        $newComic->fill($comicData);
+        $newComic->save();
+        return redirect()->route('show',$newComic->id);
     }
 
 }

@@ -18,6 +18,7 @@
             <div class="">
                 <form action="{{route('index')}}" method="post">
                 @csrf
+                
                     <label for="title"> TITLE: <br> <input type="text" name="title"></label> <br>
                     
                     <label for="description">DESCRIPTION: <br> <input type="text" name="description"></label> <br>
