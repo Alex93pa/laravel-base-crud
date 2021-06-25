@@ -16,7 +16,7 @@
             </div>
 
             <div class="">
-                <form action="{{route('index')}}" method="post">
+                <form action="{{route('store')}}" method="POST">
                 @csrf
                 
                     <label for="title"> TITLE: <br> <input type="text" name="title"></label> <br>
@@ -33,7 +33,7 @@
                     
                     <label for="type"> TYPE: <br> <input type="text" name="type"></label> <br>
                     
-                    <input type="submit" value="ADD">
+                    <input type="submit" value="ADD" >
                 </form>
             </div>
         </div>
