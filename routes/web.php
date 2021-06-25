@@ -13,6 +13,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+// comics get: mostra tutti i fumetti
+Route::get('/','ComicController@index')->name('index');
+
+
+//rotta che mostra il form
+Route::get('/comics/create','ComicController@create')->name('create');
+
+//mostra i dettagli di un solo fumetto
+Route::get('/comics/{id}','ComicController@show')->name('show');
