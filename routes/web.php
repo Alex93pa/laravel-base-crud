@@ -23,7 +23,11 @@ Route::get('/','ComicController@index')->name('index');
 Route::get('/comics/create','ComicController@create')->name('create');
 
 //
-Route::post('comic/store', 'comicController@store')->name('store');
+Route::post('comics/store', 'comicController@store')->name('store');
+
 
 //mostra i dettagli di un solo fumetto
 Route::get('/comics/{id}','ComicController@show')->name('show');
+
+//
+Route::get('comics/{id}/edit', 'comicController@edit')->name('edit');

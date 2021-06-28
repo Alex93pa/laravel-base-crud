@@ -11,12 +11,16 @@ class comicController extends Controller
     {
         $comics = Comic::all();
 
-        return view('index', compact('comics'));
+        return view('index', [
+            'comics' => $comics
+        ]);
     }
 
-    public function show($id)
+    public function show($comic)
     {
-        return view('show',compact('comic'));
+        return view('show',[
+            'comic'=> $comic
+        ]);
     }
 
     public function create()

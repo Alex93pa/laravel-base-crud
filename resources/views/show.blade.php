@@ -5,14 +5,14 @@
 @section('content')
 
 <ul>
-    <li>ID: {{ $comic->id }}</li>
-    <li> <img src=" {{ $comic->thumb }}" alt=""> </li>
-    <li>Created at: {{ $comic->title }}</li>
-    <li>Description: {{ $comic->description }}</li>
-    <li>Price: {{ $comic->series }}</li>
+    {{-- <li>ID: {{ $comic->id }}</li>
+    <li> <img src=" {{ $comic->thumb }}" alt=""> </li> --}}
+    <li>Title: {{ $comic["name"] }}</li>
+    {{-- <li>Description: {{ $comic->description }}</li>
+    <li>Series: {{ $comic->series }}</li>
     <li>Price: {{ $comic->price }}</li>
     <li>Type: {{ $comic->type }}</li>
-    <li>Type: {{ $comic->sale_date }}</li>
+    <li>Sale date: {{ $comic->sale_date }}</li> --}}
 
 
 </ul>

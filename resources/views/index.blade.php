@@ -27,13 +27,15 @@
             <tr>
             
                 <td>{{ $comic['id'] }}</td>
-                <td>{{ $comic['title'] }}</td>
+                <td>{{ $comic['name'] }}</td>
                 <td>{{ $comic['description'] }}</td>
                 <td>{{ $comic['price'] }}</td>
                 <td>{{ $comic['series'] }}</td>
                 <td>{{ $comic['type'] }}</td>
-                <td>{{ $comic['sale_date'] }}</td>
 
+                <td>
+                    {{-- <a href="{{ route('edit') }}">Modifica</a> --}}
+                </td>
             </tr>
         @endforeach
     </tbody>
