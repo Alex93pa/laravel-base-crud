@@ -1,26 +1,44 @@
-<!DOCTYPE html>
-<html lang="IT">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('layout.default')
 
-    <title>Laravel</title>
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-</head>
-<body>
-    
+@section('page_title', 'Comics')
+
+@section('content')
+   
     <div class="">
 
         <a href="{{route('create')}}"> ADD NEW COMIC </a>
         
     </div>
 
-    <div>
-        @foreach($comics as $comic)
-            <h2>{{ $comic['title'] }}</h2>
-        @endforeach
-    </div>
+    <table>
+    
+    <thead>
+        <th>Id</th>
+        <th>Title</th>
+        <th>Description</th>
+        <th>Price</th>
+        <th>Series</th>
+        <th>Type</th>
+        <th>Sale date</th>
+    </thead>
 
-</body>
-</html>
+    <tbody>
+        @foreach($comics as $comic)
+            <tr>
+            
+                <td>{{ $comic['id'] }}</td>
+                <td>{{ $comic['title'] }}</td>
+                <td>{{ $comic['description'] }}</td>
+                <td>{{ $comic['price'] }}</td>
+                <td>{{ $comic['series'] }}</td>
+                <td>{{ $comic['type'] }}</td>
+                <td>{{ $comic['sale_date'] }}</td>
+
+            </tr>
+        @endforeach
+    </tbody>
+    
+
+</table>
+
+@endsection

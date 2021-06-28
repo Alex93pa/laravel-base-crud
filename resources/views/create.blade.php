@@ -1,13 +1,8 @@
-<!DOCTYPE html>
-<html lang="IT">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('layout.default')
 
-    <title>Laravel</title>
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-</head>
+@section('page_title', 'Aggiungi un fumetto ')
+
+@section('content')
 <body>
     <div class="">
         <div class="">
@@ -19,7 +14,7 @@
                 <form action="{{route('store')}}" method="POST">
                 @csrf
                 
-                    <label for="title"> TITLE: <br> <input type="text" name="title"></label> <br>
+                    <label for="name"> TITLE: <br> <input type="text" name="name"></label> <br>
                     
                     <label for="description">DESCRIPTION: <br> <input type="text" name="description"></label> <br>
                    
@@ -39,4 +34,4 @@
         </div>
     </div>
 </body>
-</html>
+@endsection
