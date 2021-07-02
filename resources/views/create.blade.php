@@ -28,7 +28,9 @@
                     
                     <label for="type"> TYPE: <br> <input type="text" name="type"></label> <br>
                     
-                    <input type="submit" value="ADD" href="{{ route('show') }}">
+                    <a class="" href="{{ route('index') }}">Cancel</a>
+
+                    <input class="" type="submit" value="Save">
                 </form>
             </div>
         </div>

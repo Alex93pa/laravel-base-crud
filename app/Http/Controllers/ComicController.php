@@ -16,8 +16,10 @@ class comicController extends Controller
         ]);
     }
 
-    public function show($comic)
+    public function show($id)
     {
+        $comic = Comic::findOrFail($id);
+
         return view('show',[
             'comic'=> $comic
         ]);
@@ -28,6 +30,19 @@ class comicController extends Controller
         return view('create');
     }
 
+    public function edit($id)
+    {
+        $comic = Comic::find($id);
+
+        if (is_null($id)) {
+            abort(404, 'Pagina non esistente');
+        }
+
+        return view('edit', [
+            'comic' => $comic,
+        ]);
+    }
+
     public function store(Request $request){
         $comicData = $request->all();
         
@@ -35,6 +50,15 @@ class comicController extends Controller
         $newComic->fill($comicData);
         $newComic->save();
         return redirect()->route('show', $newComic);
+    }
+
+    public function destroy($id)
+    {
+        $comic = Comic::findOrFail($id);
+
+        $comic->delete();
+
+        return redirect()->route('index');
     }
 
 }

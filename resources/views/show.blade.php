@@ -5,21 +5,17 @@
 @section('content')
 
 <ul>
-    {{-- <li>ID: {{ $comic->id }}</li>
-    <li> <img src=" {{ $comic->thumb }}" alt=""> </li> --}}
-    <li>Title: {{ $comic["name"] }}</li>
-    {{-- <li>Description: {{ $comic->description }}</li>
-    <li>Series: {{ $comic->series }}</li>
-    <li>Price: {{ $comic->price }}</li>
-    <li>Type: {{ $comic->type }}</li>
-    <li>Sale date: {{ $comic->sale_date }}</li> --}}
 
+    <li>ID: <strong>{{ $comic['id'] }}</strong></li>
+    <li>DESCRIPTION: <br>{{ $comic->description }}</li>
+    <li>SERIES: <strong>{{ $comic->series }}</strong></li>
+    <li>TYPE: <strong>{{ $comic->type }}</strong></li>
+    <li>PRICE: <strong>{{ $comic->price }}</strong></li>
 
 </ul>
 
-    <div class="buttons">
-        <div><a class="" href="{{route('show',$comic['id'])}}"> DETAILS <i class="fa fa-info" aria-hidden="true"></i> </a></div>
-        <div><a class="btn edit" href="{{route('update',$comic['id'])}}"> EDIT <i class="fa fa-pencil" aria-hidden="true"></i> </a></div>
-        <div><a class="btn delete" href="{{route('show',$comic['id'])}}"> DELETE <i class="fa fa-trash" aria-hidden="true"></i></i> </a></div>
-    </div>
+    <a href="{{ route('edit') }}">Modifica</a>
+
+    @include('destroy', ["id"=> $comic->id])
+
 @endsection

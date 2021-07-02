@@ -36,6 +36,9 @@
                 <td>
                     {{-- <a href="{{ route('edit') }}">Modifica</a> --}}
                 </td>
+                <td>
+                    @include('destroy', ["id"=> $comic->id])
+                </td>
             </tr>
         @endforeach
     </tbody>
