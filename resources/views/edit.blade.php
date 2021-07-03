@@ -27,6 +27,6 @@
         <label for="sale_date">Sale Date</label>
         <input type="text" name="sale_date" id="sale_date" value="{{ $comic->sale_date }}"> <br>
 
-        <input type="submit" value="Salva" href={{ route('index')}}>
+        <input type="submit" value="Salva">
     
     </form>

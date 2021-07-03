@@ -25,7 +25,6 @@ Route::get('/comics/create','ComicController@create')->name('create');
 //
 Route::post('comics/store', 'ComicController@store')->name('store');
 
-
 //
 Route::get('comics/{id}/edit', 'ComicController@edit')->name('edit');
 

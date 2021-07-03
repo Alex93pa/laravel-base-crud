@@ -23,12 +23,10 @@ class ComicsTableSeeder extends Seeder
             $newComic = new Comic(); 
 
             $comicPrice = 0;
-            // var_dump(strpos($comic['price'], "$"));
 
             if (strpos($comic['price'], "$") >= 0) {
 
                 $comicPrice = str_replace("$", "", $comic['price']);
-                // dump($comic['price']);
             }
             
 

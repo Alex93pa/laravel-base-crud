@@ -14,8 +14,10 @@
 
 </ul>
 
-    <a href="{{ route('edit') }}">Modifica</a>
+    {{-- <a href="{{ route('edit') }}">Modifica</a> --}}
 
     @include('destroy', ["id"=> $comic->id])
+
+    <a href="{{route('index')}}">Torna alla pagina iniziale</a>
 
 @endsection

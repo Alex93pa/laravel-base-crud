@@ -37,7 +37,11 @@
                     {{-- <a href="{{ route('edit') }}">Modifica</a> --}}
                 </td>
                 <td>
+                    <a class= href = "{{ route('edit', $comic->id) }}">Modifica</a>
+
                     @include('destroy', ["id"=> $comic->id])
+
+                    
                 </td>
             </tr>
         @endforeach
